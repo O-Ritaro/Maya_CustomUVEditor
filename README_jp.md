@@ -57,7 +57,7 @@ Usage
 ## 使い方
 
 ### SUITE USERS NOTE　のWebサイトをご覧ください。
-  https://www.comtec.daikin.co.jp/DC/UsersNotes/ 
+  https://www.comtec.daikin.co.jp/DC/UsersNotes/Ritaro/tutorial/maya_12/index.html
 
 
 Licence  

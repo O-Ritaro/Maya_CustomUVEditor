@@ -47,7 +47,7 @@ to start up.
 Usage  
 ------------  
 ### See SUITE USERS NOTE 
-  https://www.comtec.daikin.co.jp/DC/UsersNotes/
+  https://www.comtec.daikin.co.jp/DC/UsersNotes/Ritaro/tutorial/maya_12/index.html
 
  Most wittern in Japanese, but Python script and picture will show you how to use it.
 

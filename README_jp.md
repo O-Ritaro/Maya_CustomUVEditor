@@ -36,7 +36,7 @@ Install
 ## インストール
 
 1,  
-ri_Custom_UV_Editor.py をMayaのスクリプトエディターにドラッグ＆ドロップし、最後の行に  
+ri_Custom_UV_Editor.py をMayaのスクリプトエディターにドラッグ＆ドロップし、
 ```py
 custom_uv_editor()   
 ```
@@ -46,6 +46,11 @@ custom_uv_editor()
 
 2,  
 Maya のパスが通ったディレクトリーに ri_Custom_UV_Editor.py をコピーし、  
+
+225行をコメントアウト(無効)にし  
+226行を有効にして　モジュールを import　するようにします。  
+最後の行に  
+
 ```py
 custom_uv_editor()  
 ```

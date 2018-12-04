@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """!
-For Maya2017- Maya Custom UV Editor V 2.2
+For Maya2017- Maya Custom UV Editor V 2.5
               - Using workspaceControl dockToControl menu Top
               - Add Absolute Value Tools on Top
               - Add interactive mode with 2 Scriptjobs
               - Add Show Editting UVSet name
+              - set modules pass in uiScript text command
 @file
 @author Ritaro
 
@@ -14,6 +15,7 @@ For Maya2017- Maya Custom UV Editor V 2.2
 import maya.cmds as cmds
 import maya.mel as mel
 import sys
+
 
 #*---  Absolute Value Tools --- *
 
@@ -219,6 +221,11 @@ def custom_uv_editor(*args):
 
     mel.eval('refresh;')
 
+#--Upper is for Shelf or ScriptEditor,Bottom is for Python import
+    custom_uveditor_windowcall = "custom_uv_editor_menu()"
+#    custom_uveditor_windowcall = "import basetoolpy.ri_Custom_UV_Editor; basetoolpy.ri_Custom_UV_Editor.custom_uv_editor_menu()"
+#--
+
     if cmds.workspaceControlState("Custom_UV_Editor",q=True,exists=True):
         cmds.workspaceControlState("Custom_UV_Editor",e=True,remove=True)
 
@@ -240,13 +247,13 @@ def custom_uv_editor(*args):
     if not cmds.workspaceControl("Custom_UV_Editor",q=True,exists=True):
         cmds.workspaceControl("Custom_UV_Editor",retain=False,initialWidth=120,initialHeight=45,width=120,height=40,
             dockToControl=[texWinName,'top'],
-            widthProperty="fixed",uiScript="custom_uv_editor_menu()")
+            widthProperty="fixed",uiScript=custom_uveditor_windowcall)
     elif not cmds.workspaceControl("Custom_UV_Editor",q=True,visible=True):
         cmds.workspaceControl("Custom_UV_Editor",e=True,visible=True)
         mel.eval('refresh;')
         cmds.workspaceControl("Custom_UV_Editor",retain=False,initialWidth=120,initialHeight=45,width=120,height=40,
             dockToControl=[texWinName,'top'],
-            widthProperty="fixed",uiScript="custom_uv_editor_menu()")
+            widthProperty="fixed",uiScript=custom_uveditor_windowcall)
 
     if not cmds.workspaceControl("UVToolkitDockControl",q=True,exists=True):
         mel.eval('UVToolkitPanel();')

@@ -38,7 +38,13 @@ in the last row, than select all to make Shelf button (Python).
 or 
 
 2,  
-Copy ri_Custom_UV_Editor.py to Maya's Pathed script ot python directory and call   
+Copy ri_Custom_UV_Editor.py to Maya's Pathed script ot python directory   
+
+comment out  line 225   
+make do      line 226 to import module   
+   
+and call   
+
 ```py
 custom_uv_editor()   
 ```

@@ -1,4 +1,4 @@
-# Maya_CustomUVEditor  
+# Maya CustomUVEditor  
 
 目次
 -----------------

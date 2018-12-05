@@ -1,4 +1,4 @@
-# Maya PivotPainter  
+# Maya_CustomUVEditor  
 
 目次
 -----------------
